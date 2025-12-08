@@ -4,7 +4,7 @@
 
 # SIMPLE_SYSTEM
 
-**[Documentation](https://ljr1981.github.io/simple_system/)**
+**[Documentation](https://simple-eiffel.github.io/simple_system/)**
 
 ### System Information Library for Eiffel
 
@@ -42,7 +42,7 @@ SIMPLE_SYSTEM provides SCOOP-compatible system information access for Eiffel app
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ljr1981/simple_system.git
+git clone https://github.com/simple-eiffel/simple_system.git
 ```
 
 2. Compile the C library:
@@ -246,8 +246,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## Contact
 
 - **Author:** Larry Rix
-- **Repository:** https://github.com/ljr1981/simple_system
-- **Issues:** https://github.com/ljr1981/simple_system/issues
+- **Repository:** https://github.com/simple-eiffel/simple_system
+- **Issues:** https://github.com/simple-eiffel/simple_system/issues
 
 ---
 
