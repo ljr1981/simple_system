@@ -1,6 +1,6 @@
 note
 	description: "Tests for SIMPLE_SYSTEM library"
-	testing: "type/manual"
+	testing: "covers"
 
 class
 	TEST_SIMPLE_SYSTEM
