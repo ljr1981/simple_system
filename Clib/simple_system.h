@@ -15,25 +15,25 @@
 #endif
 
 /* Get computer/host name. Caller must free result. */
-char* ss_get_computer_name(void);
+void* ss_get_computer_name(void);
 
 /* Get user name. Caller must free result. */
-char* ss_get_user_name(void);
+void* ss_get_user_name(void);
 
 /* Get system root directory.
  * Windows: "C:\Windows", Linux/macOS: "/" or "/usr"
  * Caller must free result.
  */
-char* ss_get_windows_directory(void);
+void* ss_get_windows_directory(void);
 
 /* Get system binaries directory.
  * Windows: "C:\Windows\System32", Linux/macOS: "/usr/bin"
  * Caller must free result.
  */
-char* ss_get_system_directory(void);
+void* ss_get_system_directory(void);
 
 /* Get temp path. Caller must free result. */
-char* ss_get_temp_path(void);
+void* ss_get_temp_path(void);
 
 /* Get number of processors/cores */
 int ss_get_processor_count(void);

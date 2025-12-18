@@ -15,7 +15,7 @@
 #if defined(_WIN32) || defined(EIF_WINDOWS)
 /* ============ WINDOWS IMPLEMENTATION ============ */
 
-char* ss_get_computer_name(void) {
+void* ss_get_computer_name(void) {
     char buffer[MAX_COMPUTERNAME_LENGTH + 1];
     DWORD size = sizeof(buffer);
     char* result;
@@ -31,7 +31,7 @@ char* ss_get_computer_name(void) {
     return result;
 }
 
-char* ss_get_user_name(void) {
+void* ss_get_user_name(void) {
     char buffer[256];
     DWORD size = sizeof(buffer);
     char* result;
@@ -47,7 +47,7 @@ char* ss_get_user_name(void) {
     return result;
 }
 
-char* ss_get_windows_directory(void) {
+void* ss_get_windows_directory(void) {
     char buffer[MAX_PATH];
     UINT len;
     char* result;
@@ -64,7 +64,7 @@ char* ss_get_windows_directory(void) {
     return result;
 }
 
-char* ss_get_system_directory(void) {
+void* ss_get_system_directory(void) {
     char buffer[MAX_PATH];
     UINT len;
     char* result;
@@ -81,7 +81,7 @@ char* ss_get_system_directory(void) {
     return result;
 }
 
-char* ss_get_temp_path(void) {
+void* ss_get_temp_path(void) {
     char buffer[MAX_PATH];
     DWORD len;
     char* result;
@@ -186,7 +186,7 @@ int ss_get_os_build_number(void) {
 #include <sys/sysctl.h>
 #endif
 
-char* ss_get_computer_name(void) {
+void* ss_get_computer_name(void) {
     char buffer[256];
     char* result;
 
@@ -198,7 +198,7 @@ char* ss_get_computer_name(void) {
     return result;
 }
 
-char* ss_get_user_name(void) {
+void* ss_get_user_name(void) {
     struct passwd* pw;
     char* result;
 
@@ -214,17 +214,17 @@ char* ss_get_user_name(void) {
     return result;
 }
 
-char* ss_get_windows_directory(void) {
+void* ss_get_windows_directory(void) {
     /* On Unix, return "/" as the system root */
     return strdup("/");
 }
 
-char* ss_get_system_directory(void) {
+void* ss_get_system_directory(void) {
     /* On Unix, return "/usr/bin" as the system binaries directory */
     return strdup("/usr/bin");
 }
 
-char* ss_get_temp_path(void) {
+void* ss_get_temp_path(void) {
     const char* tmp;
 
     /* Check environment variables in order of preference */
